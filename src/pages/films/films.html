@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar  color='primary'>
+   <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Films</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-slides pager>
+
+  <ion-slide style="background-color: primary" (click)="filmDetail(film)" *ngFor="let film of films">
+
+    <h2>{{film.title}}</h2>
+    <h1> {{film.episode_id}}</h1>
+    <p> {{film.opening_crawl}} </p>
+
+  </ion-slide>
+
+</ion-slides>
+
+  <!-- ion-list>
+
+    <ion-item class="film" (click)="filmDetail(film)" *ngFor="let film of films">
+      <h2>{{film.title}}</h2>
+    </ion-item>
+
+  </ion-list -->
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar color='primary'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>People</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <ion-list>
+
+    <button  color='primary' ion-item *ngFor="let item of peoples" (click)="detail(item)">
+                <ion-icon name="star"></ion-icon>
+                {{item.name}}
+                <p>{{item.birth_year}}</p>
+    </button>
+
+
+  </ion-list>
+
+</ion-content>
